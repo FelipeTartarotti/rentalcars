@@ -1,0 +1,78 @@
+<div class="form-group hidden">
+    <div class="input-group">
+        <input name="datepicker"
+            class="form-control"
+            ngbDatepicker
+            #datepicker="ngbDatepicker"
+            [autoClose]="'outside'"
+            (dateSelect)="onDateSelection($event)"
+            [displayMonths]="2"
+            [dayTemplate]="t"
+            [hidden]=true
+            outsideDays="hidden"
+            [startDate]="fromDate">
+        <ng-template #t let-date let-focused="focused">
+            <span class="custom-day"
+                [class.focused]="focused"
+                [class.range]="isRange(date)"
+                [class.faded]="isHovered(date) || isInside(date)"
+                (mouseenter)="hoveredDate = date"
+                (mouseleave)="hoveredDate = null">
+            {{ date.day }}
+            </span>
+        </ng-template>
+    </div>
+</div> 
+<br>
+
+<div id="date_picker">
+    <div id="pick_date_from">
+        <label>Pick-up Location</label>
+        <input #dpFromDate
+        class="form-control" placeholder="yyyy-mm-dd"
+        name="dpFromDate"
+
+        [value]="formatter.format(fromDate)"
+        (click)="datepicker.toggle()"
+        (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
+        <div class="time">
+            <select class="custom-select select-hour">
+                <option value="1">00</option>
+                <option value="2">01</option>
+                <option value="10" selected>10</option>
+            </select>
+
+            <select class="custom-select select-minute" >
+                <option selected></option>
+                <option value="1">00</option>
+                <option value="2">15</option>
+                <option value="3">30</option>
+                <option value="3">45</option>
+            </select>
+        </div>
+    </div>
+    <div id="pick_date_to">
+        <label>Drop off Date:</label>
+        <input #dpToDate
+        class="form-control" placeholder="yyyy-mm-dd"
+        name="dpToDate"
+        (click)="datepicker.toggle()"
+        [value]="formatter.format(toDate)"
+        (input)="toDate = validateInput(toDate, dpToDate.value)">
+        <div class="time">
+            <select class="custom-select select-hour">
+                <option value="1">00</option>
+                <option value="2">01</option>
+                <option value="10" selected>10</option>
+            </select>
+
+            <select class="custom-select select-minute" >
+                <option selected></option>
+                <option value="1">00</option>
+                <option value="2">15</option>
+                <option value="3">30</option>
+                <option value="3">45</option>
+            </select>
+        </div>
+    </div>
+</div>

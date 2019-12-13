@@ -1,0 +1,64 @@
+#date_picker{
+    position:relative;
+    width:100%;
+    height:120px;
+}
+
+#pick_date_to{
+    width:48%;
+    float:right;
+}
+
+#pick_date_from{
+    width:48%;
+    float:left;
+}
+
+#pick_date_from label{
+    float:left;
+}
+
+#pick_date_to label{
+    float:left; 
+}
+
+.select-hour{
+    float:left;
+    width:50%
+}
+
+.time{
+    margin-top:5px;
+}
+
+.select-minute{
+    float:right;
+    width:50%
+}
+
+.form-group.hidden {
+    width: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+  .custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+  }
+  .fas.fa-info-circle{
+      color: rgb(2, 117, 216);
+  }

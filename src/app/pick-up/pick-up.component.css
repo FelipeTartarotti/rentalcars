@@ -1,0 +1,129 @@
+
+#pickup_card{
+    width:500px;
+    height:auto;
+}
+
+#title{
+    font-size:24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:bold;
+}
+
+label{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#date_picker{
+    width:100%;
+    height:50%;
+    float:left;
+}
+
+#pick_date_to{
+    width:48%;
+    float:right;
+}
+
+#pick_date_from{
+    width:48%;
+    float:left;
+}
+
+#pick_date_from label{
+    float:left;
+}
+
+#pick_date_to label{
+    float:left; 
+}
+
+.card-body{
+    background-color:#F3CE56;
+}
+
+
+#dropdown{
+    position: absolute;
+    margin-left: 0px;
+    z-index: 10;
+    width:92%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    #dropdown{
+        position: absolute;
+        margin-left: 0px;
+        z-index: 10;
+        width:88%;
+    }
+    
+}
+
+#check-drop-off{
+    position: relative;
+    margin-top:10px;
+    z-index: 2;
+}
+
+#drop-off{
+    position: relative;
+    z-index: 1; 
+}
+
+
+.far.fa-question-circle{
+    color:blue;
+}
+
+#search_button{
+    width:100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+#badge{
+    float:left;
+    font-size: 0.8em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.location_name{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+.location_country{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+}
+
+.select-hour{
+    float:left;
+    width:50%
+}
+
+#driver_label{
+    float:left;
+    padding-left:20px;
+    padding-right:5px;
+    margin-top:5px;
+
+}
+
+#driver_input{
+    width:50px;
+}
+
+.time{
+    margin-top:5px;
+}
+
+.select-minute{
+    float:right;
+    width:50%
+}
+

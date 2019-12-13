@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+        <div class="card" id="pickup_card" >
+            <div class="card-body" >
+                <div id="title">Where are you going?</div>
+                <br>
+                
+                <label>Pick-up Location</label>
+                <input 
+                    autocomplete="off"
+                    aria-label="Pick Up Location"
+                    [placeholder]="place_holder" 
+                    (keypress)="get_location()"
+                    [(ngModel)]="location"
+                    name = "location"
+                    type="text" class="form-control">
+
+                <div  id="dropdown" *ngIf="location.length > 1">
+                    <ul class="list-group" *ngFor="let location of locations_result">
+                        <li class="list-group-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div *ngIf="location.bookingId" class="badge badge-primary" [appBadge]="location.bookingId" id="badge">{{location.bookingId | badgeName}}</div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="location_name">{{location.name}}</div>
+                                        <div class="location_country">{{location.country}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div> 
+
+                <div class="form-check" id="check-drop-off">
+                    <input class="form-check-input" type="checkbox" value="" data-toggle="collapse" href="#drop-off" role="button" aria-expanded="false" aria-controls="drop-off">
+                    <label class="form-check-label">
+                        Drop car off at different location
+                    </label>
+                </div>
+    
+                <div class="collapse" id="drop-off">
+                    <label for="exampleInputEmail1">Drop-off Location</label>
+                    <input 
+                        aria-label="Drop-off Location"
+                        [placeholder]="place_holder" 
+                        type="text" class="form-control">
+                </div>
+        
+                
+                <app-date-picker></app-date-picker>
+            
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" data-toggle="collapse" href="#drivers-age" role="button" aria-expanded="true" aria-controls="drivers-age" checked>
+                    <label class="form-check-label">Driver aged between 30 – 65 <span ngbPopover="Some companies charge more for younger or older drivers. Before you choose a car, we’ll show you exactly who charges what." triggers="mouseenter:mouseleave" popoverTitle="No hidden Fees"><i class="far fa-question-circle"></i></span></label>
+                </div>
+                <div>
+            
+                <div class="collapse" id="drivers-age">
+                    <label id="driver_label">Driver's age</label>
+                    <input id="driver_input"  type="text" class="form-control">
+                </div>
+            
+                <br>
+
+                <button type="button" id="search_button" class="btn btn-success btn-lg">Search</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
